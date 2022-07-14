@@ -9,15 +9,9 @@ class PageController extends Controller
     public function index() {
         $data = [
             'pageName' => 'Homepage',
-            'pageTitle' => 'Sono la homepage'
+            'pageTitle' => 'I film presenti sono'
         ];
-        return view('home', $data);
-    }
-
-    public function movieList() {
         $movie = \App\Movie::all();
-        //con lo slash iniziale il percorso è assoluito
-        dd($movie);
-       /*  return view('home', $movie); */
+        return view('home', $data, compact('movie'));
     }
 }

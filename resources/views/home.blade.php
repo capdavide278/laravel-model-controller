@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+@extends('templates.base')
+
+@section('pageTitle', 'Film disponibili')
+
+@section('pageMain')
+    <main>
+        <ul>
+            @foreach ($movie as $movies)
+                <li>{{$movies->title}}</li>
+            @endforeach
+        </ul>
+    </main>
+
+@endsection
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,5 +22,10 @@
 </head>
 <body>
     <h1>{{$pageTitle}}</h1>
+    <ul>
+        @foreach ($movie as $movies)
+            <li>{{$movies->title}}</li>
+        @endforeach
+    </ul>
 </body>
-</html>
+</html> --}}
