@@ -18,5 +18,6 @@ class PageController extends Controller
         $movie = \App\Movie::all();
         //con lo slash iniziale il percorso è assoluito
         dd($movie);
+       /*  return view('home', $movie); */
     }
 }
