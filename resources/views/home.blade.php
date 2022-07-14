@@ -4,9 +4,13 @@
 
 @section('pageMain')
     <main>
+        <h1>Film proiettati in sala:</h1>
         <ul>
             @foreach ($movie as $movies)
-                <li>{{$movies->title}}</li>
+                <li><div class="riquadro">Titolo: {{$movies->title}}</div></li>
+                <li><div class="riquadro">Un film: {{$movies->nationality}}</div></li>
+                <li><div class="riquadro">Voto complessivo:{{$movies->vote}}</div></li>
+                <br>
             @endforeach
         </ul>
     </main>
