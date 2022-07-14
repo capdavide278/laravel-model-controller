@@ -1,21 +1,31 @@
 //
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-image: url('https://napoli.zon.it/wp-content/uploads/2022/05/site_640_480_limit_cinema-frontenay-rohan-1.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
-}
-
-h1{
-    color: white;
-}
-
-li{
-    list-style: none;
     
+    h1{
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 25px;
+    }
+    ul{
+        display: flex;
+        justify-content: flex-start;
+    
+        li{
+            list-style: none;
+            margin-left: 45px;
+            background-color: rgb(192, 166, 134);
+            width: 10%;
+            padding: 4px;
+        }
+    }
 }
 
-.riquadro{
-    background-color: bisque;
-    width: 10%;
-    padding: 4px;
-}

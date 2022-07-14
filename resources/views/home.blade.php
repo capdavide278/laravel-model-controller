@@ -5,14 +5,18 @@
 @section('pageMain')
     <main>
         <h1>Film proiettati in sala:</h1>
-        <ul>
-            @foreach ($movie as $movies)
-                <li><div class="riquadro">Titolo: {{$movies->title}}</div></li>
-                <li><div class="riquadro">Un film: {{$movies->nationality}}</div></li>
-                <li><div class="riquadro">Voto complessivo:{{$movies->vote}}</div></li>
-                <br>
-            @endforeach
-        </ul>
+        <div id="flex">
+            <ul>
+                @foreach ($movie as $movies)
+                    <li><div>Titolo: {{$movies->title}}</div>
+                    <div>Un film: {{$movies->nationality}}</div>
+                    <div>Voto complessivo: {{$movies->vote}}</div>
+                    <div>Titolo originale: {{$movies->original_title}}</div>
+                    <div>Data: {{$movies->date}}</div></li>
+                    <br>
+                @endforeach
+            </ul>
+        </div>
     </main>
 
 @endsection
